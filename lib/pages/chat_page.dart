@@ -1,4 +1,5 @@
 import 'package:demo_chat_app/constans.dart';
+import 'package:demo_chat_app/pages/call_page.dart';
 import 'package:demo_chat_app/widgets/friend_chat.dart';
 import 'package:demo_chat_app/widgets/friend_profile_online.dart';
 import 'package:demo_chat_app/widgets/icon_container.dart';
@@ -15,7 +16,7 @@ class ChatPage extends StatelessWidget {
     Widget myBottomNavbar() {
       return Container(
         width: MediaQuery.of(context).size.width,
-        height: 80,
+        height: 70,
         color: kNavbarColor,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -24,11 +25,20 @@ class ChatPage extends StatelessWidget {
               iconUrl: "assets/icon_chat.png",
               title: "Chats",
               isActive: true,
+              onTap: () {},
             ),
             NavbarItem(
               iconUrl: "assets/icon_callnavbar.png",
               title: "Calls",
               isActive: false,
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CallPage(),
+                  ),
+                );
+              },
             ),
           ],
         ),
@@ -77,23 +87,23 @@ class ChatPage extends StatelessWidget {
               child: Row(
                 children: [
                   MyProfilOnline(),
-                  FriendProfile(
+                  FriendProfileImage(
                     imageUrl: "assets/image_profil1.png",
                     isActive: true,
                   ),
-                  FriendProfile(
+                  FriendProfileImage(
                     imageUrl: "assets/image_profil2.png",
                     isActive: true,
                   ),
-                  FriendProfile(
+                  FriendProfileImage(
                     imageUrl: "assets/image_profil3.png",
                     isActive: true,
                   ),
-                  FriendProfile(
+                  FriendProfileImage(
                     imageUrl: "assets/image_profil4.png",
                     isActive: true,
                   ),
-                  FriendProfile(
+                  FriendProfileImage(
                     imageUrl: "assets/image_profil5.png",
                     isActive: true,
                   ),

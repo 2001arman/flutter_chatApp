@@ -1,8 +1,9 @@
 import 'package:demo_chat_app/constans.dart';
 import 'package:flutter/material.dart';
 
-class FriendProfile extends StatelessWidget {
-  const FriendProfile({Key? key, required this.imageUrl, this.isActive = false})
+class FriendProfileImage extends StatelessWidget {
+  const FriendProfileImage(
+      {Key? key, required this.imageUrl, this.isActive = false})
       : super(key: key);
 
   final String imageUrl;

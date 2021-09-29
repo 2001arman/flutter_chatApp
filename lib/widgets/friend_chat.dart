@@ -18,7 +18,7 @@ class FriendChat extends StatelessWidget {
       children: [
         Row(
           children: [
-            FriendProfile(imageUrl: imageUrl),
+            FriendProfileImage(imageUrl: imageUrl),
             SizedBox(width: 15),
             Container(
               width: 130,
@@ -54,7 +54,7 @@ class FriendChat extends StatelessWidget {
           height: 1,
           margin: EdgeInsets.symmetric(vertical: 16),
           color: kDividerColor,
-        )
+        ),
       ],
     );
   }
